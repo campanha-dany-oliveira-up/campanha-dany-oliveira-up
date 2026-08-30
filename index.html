@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#B82B2B" />
+  <title>Sou estudante e tô com a Dany!</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="intro">
+      <p class="eyebrow">GERADOR DE STORY</p>
+      <h1>SOU ESTUDANTE E TÔ COM A DANY!</h1>
+      <p class="lead">Sua foto ocupa a tela inteira. A arte fica apenas por cima, sem fundo.</p>
+    </header>
+
+    <section class="card controls">
+      <label class="upload" for="foto">
+        ESCOLHER FOTO
+        <input id="foto" type="file" accept="image/*" />
+      </label>
+
+      <div class="control-row">
+        <label for="zoom">Zoom</label>
+        <input id="zoom" type="range" min="1" max="3" value="1" step="0.01" />
+      </div>
+
+      <div class="button-row">
+        <button id="centralizar" class="secondary" type="button">CENTRALIZAR</button>
+        <button id="baixar" class="primary" type="button">BAIXAR STORY</button>
+      </div>
+
+      <p class="hint">Arraste a foto com o dedo ou mouse para ajustar o enquadramento.</p>
+    </section>
+
+    <section class="preview-card">
+      <canvas id="canvas" width="1080" height="1920"></canvas>
+    </section>
+
+    <footer>Sua foto é processada somente no seu dispositivo.</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
